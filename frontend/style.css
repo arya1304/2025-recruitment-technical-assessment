@@ -120,28 +120,28 @@
 /*Buildings*/
 
 .buildings {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
 .each_building {
     position: relative;
-    height: 300px;
-    width: 300px;
-    margin: 20px;
+    object-fit: cover;
+    height: 370px;
+    width: 330px;
+    margin: 10px;
     border: 1px transparent;
     border-radius: 10px;
 }
+
+
+
 
 .building {
     display: flex;
     flex-direction: column;
 }
-
-
 
 
 .bottom-left {
@@ -164,8 +164,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    top: -350px;
-    left: 100px;
+    top: -400px;
+    left: 120px;
     max-width: 150px;
     max-height: 30px;
     border: 2px solid white;
@@ -181,3 +181,4 @@
     background: green;
     border-radius: 50%;
 }
+
