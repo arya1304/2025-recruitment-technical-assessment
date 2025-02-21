@@ -128,23 +128,16 @@
 
 
 .each_building {
-    position: relative;
+    display: block;
+    inset: 0px;
     object-fit: cover;
-    height: 370px;
+    height: 385px;
     width: 330px;
     margin: 10px;
     border: 1px transparent;
     border-radius: 10px;
+    
 }
-
-
-
-
-.building {
-    display: flex;
-    flex-direction: column;
-}
-
 
 .bottom-left {
     position: relative;
@@ -184,3 +177,33 @@
     border-radius: 50%;
 }
 
+
+@media (max-width: 900.00px) {
+    .each_building {
+        height: 200px;
+    }
+
+    .top-left {
+        top: -550px;
+    }
+
+    .buildings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) { 
+    .buildings {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .bottom-left {
+        margin: 0px 90px;
+        left: -75px;
+    }
+    .buildings {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
